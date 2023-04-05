@@ -20,7 +20,7 @@ def add_note(request: HttpRequest):
 
 def search(request: HttpRequest):
     query = request.GET.get("content")
-    notes = Note.objects.raw("SELECT * from foobar_note where content = {}".format(query))
+    notes = Note.objects.filter(content=query)
     return render(request, "index.html", locals())
 
 def delete(request: HttpRequest):
