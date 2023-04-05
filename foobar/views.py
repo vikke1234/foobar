@@ -17,3 +17,11 @@ def add_note(request: HttpRequest):
     note = Note(content=content)
     note.save()
     return redirect("/")
+
+def search(request: HttpRequest):
+    query = request.GET.get("content")
+    notes = Note.objects.raw("SELECT * from foobar_note where content = {}".format(query))
+    return render(request, "index.html", locals())
+
+def delete(request: HttpRequest):
+    pass
