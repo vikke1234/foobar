@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "foobar"
+version = "0.1.0"
+description = ""
+authors = ["Viktor Horsmanheimo <viktor.horsmanheimo@gmail.com>"]
+license = "GPLv3"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+django = "4.0.5"
+requests = "^2.28.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
