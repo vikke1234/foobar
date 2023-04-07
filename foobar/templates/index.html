@@ -5,9 +5,16 @@
 <h1>Notes</h1>
 <h2> Search </h2>
 <form action="/search" method="get">
+    <label> query </label>
     <input name="content" type="text">
-    <input type="submit">
+    <br>
+    <label> Extract using: </label>
+    <input name="date" type="text" value "Valid values, year, month, day">
+    <br>
+    <input type="submit" name="submit">
+    <input type="submit" name="show_plan">
 </form>
+
 
 <h2> Add note </h2>
 <form action="/add" method="post">
@@ -16,9 +23,6 @@
     <input type="submit">
 </form>
 
-{% for note in notes %}
-<p> {{note}} </p>
-{% endfor %}
 
 </body>
 </html>
